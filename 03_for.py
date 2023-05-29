@@ -4,12 +4,12 @@ from rich import print
 
 def count_sales(products):
     total_items_sold = []
-    for phone in products:
+    for position, phone in enumerate(products, start=1):
         total_sales = f"Суммарное количество продаж: {sum(phone['items_sold'])}"
         average_sales = f"Среднее количество продаж: {round(mean(phone['items_sold']), 2)}"
         total_items_sold += phone['items_sold']
         print(f"[underline]{phone['product']}[/underline]", total_sales, average_sales, sep='\n')
-        if products.index(phone) != len(products) - 1:
+        if position != len(products):
             print("---")
         else:
             print("===")
