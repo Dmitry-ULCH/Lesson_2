@@ -1,5 +1,3 @@
-user_age = int(input("Введите возраст: "))
-
 def get_occupation(age):
     if age <= 0:
         return "Поздравляем, Вы ещё не родились!"
@@ -16,9 +14,12 @@ def get_occupation(age):
     else:
         return "Наконец-то можно и отдохнуть!"
     
+
 def main():
+    user_age = int(input("Введите возраст: "))
     user_occupation = get_occupation(user_age)
     print(user_occupation)
+
 
 if __name__ == "__main__":
     main()

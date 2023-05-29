@@ -124,3 +124,6 @@ dmypy.json
 
 # TEST
 TEST.py
+
+# Settings
+ephem_bot_settings.py
